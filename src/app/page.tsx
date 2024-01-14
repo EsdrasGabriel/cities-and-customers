@@ -1,5 +1,6 @@
 import FilterModal from "@/components/FilterModal";
 import Search from "@/components/Search";
+import Table from "@/components/Table";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
             <Search />
           </div>
         </section>
-        <section>Hello</section>
+        <section className="pt-10 w-full h-full">
+          <Table />
+        </section>
       </main>
   )
 }
