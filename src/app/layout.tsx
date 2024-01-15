@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/default/Header'
 import AsideBar from '@/components/default/AsideBar'
+import { SearchHomeProvider } from '@/contexts/homeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,9 @@ export default function RootLayout({
           <Header />
           <section className='flex h-full'>
             <AsideBar />
-            {children}
+            <SearchHomeProvider>
+              {children}
+            </SearchHomeProvider>
           </section>
       </body>
     </html>
